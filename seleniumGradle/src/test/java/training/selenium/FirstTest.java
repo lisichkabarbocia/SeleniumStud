@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class FirstTest {
 
@@ -26,9 +27,14 @@ public class FirstTest {
 
     @Test
     public void myFirstTest() {
-        driver.navigate().to("http://www.google.com");
+        driver = new ChromeDriver();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+
+        driver.get("http://www.google.com");
+        //driver.navigate().to("http://www.google.com");
         driver.findElement(By.name("q")).sendKeys("webdriver");
-        driver.findElement(By.name("btnG")).click();
+        wait.until(visibilityOfElementLocated(By.name("btnK")));
+        driver.findElement(By.name("btnK")).click();
         wait.until(titleIs("webdriver - Поиск в Google"));
 
     }
