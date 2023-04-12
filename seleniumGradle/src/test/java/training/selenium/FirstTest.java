@@ -1,7 +1,7 @@
 package training.selenium;
 
-import org.junit.After;
-import org.junit.Before;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,20 +15,18 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
 
 public class FirstTest {
 
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private static WebDriver driver;
+    private static WebDriverWait wait;
 
 
-    @Before
-    public void start() {
+    @BeforeAll
+    public static void start() {
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     @Test
     public void myFirstTest() {
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 
         driver.get("http://www.google.com");
         //driver.navigate().to("http://www.google.com");
@@ -39,8 +37,8 @@ public class FirstTest {
 
     }
 
-    @After
-    public void stop() {
+    @AfterAll
+    public static void stop() {
         driver.quit();
         driver = null;
     }
