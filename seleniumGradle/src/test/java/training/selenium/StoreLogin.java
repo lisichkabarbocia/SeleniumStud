@@ -16,6 +16,8 @@ public class StoreLogin {
     private static WebDriver driver;
     private static WebDriverWait wait;
     private static WebElement menuBlock;
+    private static WebElement productList;
+    private static WebElement product;
     private static Integer menuItemsCount;
     private static Integer menuItemsChildCount;
 
@@ -25,6 +27,20 @@ public class StoreLogin {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+
+    @Test
+    public void checkLabels() {
+
+        driver.get("http://localhost/litecart/en/");
+        driver.findElement(By.className("category-1")).click();
+        productList = driver.findElement(By.className("products"));
+        int size = productList.findElements(By.className("product")).size();
+
+        for (int i = 1; i <= size; i++) {
+            product = productList.findElement(By.xpath("./li["+i+"]"));
+            assert product.findElements(By.xpath(".//div[contains(@class,'sticker')]")).size()==1 : "Стикер у товара " + product.getText() + " настроен неверно!";
+        }
     }
 
     @Test
@@ -62,6 +78,10 @@ public class StoreLogin {
         driver.findElement(By.className("fa-sign-out")).click();
 
     }
+
+
+
+
 
     @AfterAll
     public static void stop() {
