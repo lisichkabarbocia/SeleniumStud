@@ -1,8 +1,8 @@
 package training.selenium;
 
+import org.junit.Test;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,7 +33,7 @@ public class StoreLogin {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    @Test
+   @Test
     public void checkZoneSort() {
 
         driver.get("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
@@ -113,7 +113,7 @@ public class StoreLogin {
     }
 
 
-    //@Test
+    @Test
     public void checkLabels() {
 
         driver.get("http://localhost/litecart/en/");
@@ -127,7 +127,7 @@ public class StoreLogin {
         }
     }
 
-    //@Test
+    @Test
     public void myFirstTest() {
 
         driver.get("http://localhost/litecart/admin/");
@@ -138,7 +138,7 @@ public class StoreLogin {
 
     }
 
-    //@Test
+    @Test
     public void browseMenu() {
 
         driver.get("http://localhost/litecart/admin/");
@@ -172,6 +172,9 @@ public class StoreLogin {
         driver.quit();
         driver = null;
     }
+
+
+
 
     public void login() {
         driver.findElement(By.name("username")).sendKeys("admin");
