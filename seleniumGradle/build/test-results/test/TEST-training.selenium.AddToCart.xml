@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="training.selenium.AddToCart" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-16T18:04:04" hostname="N-MSK-RUAACFQ" time="27.077">
+  <properties/>
+  <testcase name="cartScenario()" classname="training.selenium.AddToCart" time="27.077"/>
+  <system-out><![CDATA[Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+В корзине 5 наименований!
+Нажата кнопка Remove!
+В корзине 4 наименований!
+Нажата кнопка Remove!
+В корзине 3 наименований!
+Нажата кнопка Remove!
+В корзине 2 наименований!
+Нажата кнопка Remove!
+Нажата кнопка Remove!
+Корзина пуста!
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 35798
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+]]></system-err>
+</testsuite>

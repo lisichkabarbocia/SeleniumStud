@@ -33,7 +33,7 @@ public class AddToCart {
         start("Chrome");
         driver.get("http://localhost/litecart/en/");
 
-        for (int i =0; i<11; i++){
+        for (int i = 1; i<11; i++){
             goHome();
             pickProduct();
             addProductToCart();
@@ -140,33 +140,31 @@ public class AddToCart {
 
     //на вход число - тогда сравнение с ним и проверка что равно;
     //на вход +-\d - тогда проверка что текущее число строк равно сохраненному orderProdQuantity +-\d
-    public Boolean checkOrderProductQuantity(String quantity) {
-        Integer quantityNum;
+    public Boolean checkOrderProductQuantity(String stepNum) {
+        Integer step;
         Integer staleQuantity;
         staleQuantity = orderProdQuantity;
         String move="";
-        if (quantity.matches("([+-])(\\d+)")) {
-            move = quantity.substring(0, 1);
-            quantityNum = Integer.parseInt(quantity.replaceFirst("([+-])", ""));
-        } else { quantityNum = Integer.parseInt(quantity);}
+        if (stepNum.matches("([+-])(\\d+)")) {
+            move = stepNum.substring(0, 1);
+            step = Integer.parseInt(stepNum.replaceFirst("([+-])", ""));
+        } else { step = Integer.parseInt(stepNum);}
 
-        if (quantityNum==0) {
+        if (step==0) {
             wait.until(presenceOfElementLocated(By.xpath("//div[@id='checkout-cart-wrapper']//em[contains(text(), 'There are no items in your cart.')]")));
             System.out.println("Корзина пуста!");
             return true;
         }
        if  (move.equals("-")) {
-            wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//form[@name='cart_form']/a[contains(@class,'image-wrapper')]"), staleQuantity - quantityNum));
-            WebElement orderSummary = wait.until(presenceOfElementLocated(By.xpath("//div[h2[contains(text(), 'Order Summary')]]")));
-            orderProdQuantity = orderSummary.findElements(By.xpath(".//td[@class='item']")).size();
-            return (staleQuantity - quantityNum)==orderProdQuantity;
+            wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//div[h2[contains(text(), 'Order Summary')]]//td[@class='item']"), staleQuantity - step));
+            orderProdQuantity = staleQuantity - step;
+            return true;
         } else if (move.equals("+")) {
-            wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//form[@name='cart_form']//a[@class='image-wrapper']"), staleQuantity + quantityNum));
-            WebElement orderSummary = wait.until(presenceOfElementLocated(By.xpath("//div[h2[contains(text(), 'Order Summary')]]")));
-            orderProdQuantity = orderSummary.findElements(By.xpath(".//td[@class='item']")).size();
-            return ((staleQuantity + quantityNum)==orderProdQuantity);
+           wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//div[h2[contains(text(), 'Order Summary')]]//td[@class='item']"), staleQuantity + step));
+           orderProdQuantity = staleQuantity + step;
+           return true;
         }
-        return (orderProdQuantity.equals(quantityNum));
+        return (orderProdQuantity.equals(step));
 
     }
 
