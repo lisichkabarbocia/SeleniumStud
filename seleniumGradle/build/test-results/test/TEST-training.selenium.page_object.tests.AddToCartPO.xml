@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="training.selenium.page_object.tests.AddToCartPO" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-05-16T20:40:46" hostname="N-MSK-RUAACFQ" time="32.802">
+  <properties/>
+  <testcase name="[1] Chrome" classname="training.selenium.page_object.tests.AddToCartPO" time="16.565"/>
+  <testcase name="[2] Firefox" classname="training.selenium.page_object.tests.AddToCartPO" time="16.235"/>
+  <system-out><![CDATA[Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+Нажата кнопка Remove!
+В корзине 2 наименований!
+Нажата кнопка Remove!
+Нажата кнопка Remove!
+Корзина пуста!
+Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+Нажата кнопка Add To Cart!
+Нажата кнопка Remove!
+В корзине 2 наименований!
+Нажата кнопка Remove!
+Нажата кнопка Remove!
+Корзина пуста!
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 5989
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+1684269664583	geckodriver	INFO	Listening on 127.0.0.1:7684
+1684269665053	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "39729" "--remote ... calhost:39729/,http://[::1]:39729/" "-no-remote" "-profile" "C:\\Users\\ruaacfq\\AppData\\Local\\Temp\\rust_mozprofile5P5mGH"
+console.error: JsonSchemaValidator.jsm: 
+  Ignoring parameter "https://addons.mozilla.org/firefox/downloads/file/3448508/saml_tracer-1.6-an+fx.xpi?src=dp-btn-primary" - origin was expected but received full URL.
+console.error: JsonSchemaValidator.jsm: 
+  Ignoring parameter "https://armbio-test-app.raiffeisen.ru/armb/views/equipment_test" - origin was expected but received full URL.
+console.error: JsonSchemaValidator.jsm: 
+  Ignoring parameter "https://armbio-test-app.raiffeisen.ru/armb/*" - origin was expected but received full URL.
+console.error: JsonSchemaValidator.jsm: 
+  Ignoring parameter "http://armbio-test-app.raiffeisen.ru/armb/*" - origin was expected but received full URL.
+console.error: JsonSchemaValidator.jsm: 
+  Ignoring parameter "https://armbio-test-app.raiffeisen.ru/armb/views/equipment_test" - origin was expected but received full URL.
+console.error: JsonSchemaValidator.jsm: 
+  Ignoring parameter "https://armbio-test-app.raiffeisen.ru/armb/*" - origin was expected but received full URL.
+console.error: JsonSchemaValidator.jsm: 
+  Ignoring parameter "armbio-test-app.raiffeisen.ru" - not a valid origin.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1684269665877	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1684269665891	Marionette	INFO	Listening on port 55322
+Read port: 55322
+WebDriver BiDi listening on ws://127.0.0.1:39729
+1684269666136	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\ruaacfq\\AppData\\Local\\Temp\\rust_mozprofile5P5mGH\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:39729/devtools/browser/0ab39821-7f37-4a3b-bdb3-3491de60b230
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+1684269678123	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:55369
+1684269678135	CDP	WARN	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1684269678141	Marionette	INFO	Stopped listening on port 55322
+Dynamically enable window occlusion 1
+console.error: "TelemetryScheduler.shutdown - Already shut down"
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange" at addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:824:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+WARNING: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+WARNING: addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:727:15
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:523:26
+addBlocker@resource://gre/modules/AsyncShutdown.sys.mjs:458:15
+setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1548:28
+@resource://gre/modules/osfile/osfile_async_front.jsm:1568:16
+@resource://gre/modules/osfile.jsm:12:30
+@resource://gre/modules/TelemetryStorage.sys.mjs:10:28
+_checkPendingPings@resource://gre/modules/TelemetrySend.sys.mjs:863:17
+setup@resource://gre/modules/TelemetrySend.sys.mjs:803:18
+setup@resource://gre/modules/TelemetrySend.sys.mjs:241:30
+setupTelemetry/this._delayedInitTask<@resource://gre/modules/TelemetryControllerParent.sys.mjs:824:36
+observe@resource://gre/modules/AsyncShutdown.sys.mjs:576:16
+
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 727: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "OS.File: flush I/O queued before profileBeforeChange"
+]]></system-err>
+</testsuite>

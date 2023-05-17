@@ -35,7 +35,8 @@ public class Page {
     }
 
     public void clickButton(String visualName) {
-        WebElement button = wait.until(presenceOfElementLocated(By.xpath("//button[@type='submit' and contains(text(),'"+visualName+"')]")));
+        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit' and contains(text(),'"+visualName+"')]")));
+        //WebElement button = wait.until(presenceOfElementLocated(By.xpath("//button[@type='submit' and contains(text(),'"+visualName+"')]")));
         button.click();
         System.out.println("Нажата кнопка " +visualName+ "!");
 

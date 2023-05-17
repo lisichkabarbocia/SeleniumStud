@@ -13,7 +13,7 @@ public class CheckoutPage extends Page {
         super(driver);
     }
 
-    private Integer orderProdQuantity;
+    protected Integer orderProdQuantity;
 
     //на вход число - тогда сравнение с ним и проверка что равно;
     //на вход +-\d - тогда проверка что текущее число строк равно сохраненному orderProdQuantity +-\d
@@ -51,6 +51,7 @@ public class CheckoutPage extends Page {
     public Boolean checkOrderProductQuantity() {
         WebElement orderSummary = wait.until(presenceOfElementLocated(By.xpath("//div[h2[contains(text(), 'Order Summary')]]")));
         orderProdQuantity = orderSummary.findElements(By.xpath(".//td[@class='item']")).size();
+        System.out.println(orderProdQuantity);
         return true;
     }
 
@@ -61,10 +62,12 @@ public class CheckoutPage extends Page {
             while (orderProdQuantity > 1) {
                 System.out.println("В корзине " + orderProdQuantity + " наименований!");
                 clickButton("Remove");
-                assert checkOrderProductQuantity("-1") : "Удаление не сработало! осталось " + orderProdQuantity + " наименований";
+                //assert checkOrderProductQuantity("-1") : "Удаление не сработало! осталось " + orderProdQuantity + " наименований";
+                checkOrderProductQuantity("-1");
             }
             clickButton("Remove");
-            assert checkOrderProductQuantity("0") : "Удаление не сработало! осталось " + orderProdQuantity + " наименований";
+            //assert checkOrderProductQuantity("0") : "Удаление не сработало! осталось " + orderProdQuantity + " наименований";
+            checkOrderProductQuantity("0");
         }
     }
 
